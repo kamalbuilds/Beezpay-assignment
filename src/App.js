@@ -7,6 +7,7 @@ import Signup from "./components/Signup";
 import PhoneSignUp from "./components/PhoneSignUp";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { UserAuthContextProvider } from "./context/UserAuthContext";
+import Axios from 'axios';
 
 function App() {
   return (

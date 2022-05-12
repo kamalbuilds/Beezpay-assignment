@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import { useUserAuth } from "../context/UserAuthContext";
+import Axios from 'axios';
 
 const Home = () => {
+  // useEffect(()=>{
+  //   Axios.get('')
+  //   .then(res=> console.log(res.data))
+  //   .catch(err=> console.Console.log(err))
+  // },[])
   const { logOut, user } = useUserAuth();
   const navigate = useNavigate();
   const handleLogout = async () => {
