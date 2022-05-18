@@ -1,10 +1,10 @@
 .header {
-    height: 60px; 
+    height: 100px; 
     display: flex;
     align-items: center;
     background-color: #131921;
     position: sticky; 
-    top: 0;
+    top: 50px;
     z-index: 100;
 }
 
@@ -22,6 +22,9 @@
     border-radius: 24px;
     flex-direction: column;
     color: whitesmoke;
+    position: relative;
+    left: -1056px;
+    
 }
 
 .header__searchInput {
@@ -45,10 +48,16 @@
     display: flex;
     justify-content: space-evenly;
 }
-.header__option {
-    display: flex; 
-    flex-direction: column; 
-    margin-left: 10px; 
+.header__option { 
+    flex-direction: column;
+    margin-left: 10px;
     margin-right: 10px;
-    color: #ffffff
+    color: #ffffff;
+    flex: 2 1;
+    position: relative;
+    right: -638px;
+}
+.logo{
+    position: relative;
+    right: 1100px;
 }

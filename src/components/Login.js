@@ -14,16 +14,7 @@ const Login = () => {
   const { logIn, googleSignIn } = useUserAuth();
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError("");
-    try {
-      await logIn(email, password);
-      navigate("/home");
-    } catch (err) {
-      setError(err.message);
-    }
-  };
+
 
 
 
@@ -36,7 +27,7 @@ const Login = () => {
         <h2 className="mb-3">Join Waitlist Form</h2>
         <h6>No hidden fees, No Joining fees, No Annual fees</h6><br />
         {error && <Alert variant="danger">{error}</Alert>}
-        <Form onSubmit={handleSubmit}>
+        <Form>
         
         <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Control

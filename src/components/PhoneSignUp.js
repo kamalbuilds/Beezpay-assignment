@@ -5,6 +5,7 @@ import { Button } from "react-bootstrap";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import { useUserAuth } from "../context/UserAuthContext";
+import card2 from './images/card2.svg';
 
 const PhoneSignUp = () => {
   const [error, setError] = useState("");
@@ -45,7 +46,8 @@ const PhoneSignUp = () => {
   return (
     <>
       <div className="p-4 box">
-        <h2 className="mb-3">Firebase Phone Auth</h2>
+        <h2 className="mb-3">Verify your Phone number</h2>
+        <img src={card2} alt="card2" />
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={getOtp} style={{ display: !flag ? "block" : "none" }}>
           <Form.Group className="mb-3" controlId="formBasicEmail">

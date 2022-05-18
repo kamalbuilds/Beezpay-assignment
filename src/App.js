@@ -26,7 +26,8 @@ function App() {
                 }
               />
       
-              <Route path="/landing" elements={{ <Header /> ,<Landing />}} >
+              {/* <Route path="/landing" elements={{ <Header /> ,<Landing />}} > */}
+              <Route path="/" element={<> <Header /> ,<Landing /></>}/>
               <Route path="/signup" element={<Signup />} />
               <Route path="/Login" element={<Login />} />
               <Route path="/phonesignup" element ={<PhoneSignUp />} />

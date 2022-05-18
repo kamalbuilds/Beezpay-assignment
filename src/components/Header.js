@@ -7,7 +7,7 @@ function Header() {
     return (
         <div className="header">
             <Link to="/">
-                <img alt="Beezhive icon" src={icon} />
+                <img alt="Beezhive icon" src={icon} className='logo' />
                 
             </Link>
             <div className="header__search">

@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import { useUserAuth } from "../context/UserAuthContext";
+// import axios from 'axios';
 
 const Home = () => {
   const { logOut, user } = useUserAuth();
@@ -14,10 +15,17 @@ const Home = () => {
       console.log(error.message);
     }
   };
+
+//axios post request on successful signup
+  // axios.post{
+
+  // }
+
+
   return (
     <>
       <div className="p-4 box mt-3 text-center">
-        Hello Welcome <br />
+        You are on our waitlist My friend! <br />
         {user && user.email}
       </div>
       <div className="d-grid gap-2">
