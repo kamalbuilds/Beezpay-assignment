@@ -7,6 +7,8 @@ import Signup from "./components/Signup";
 import PhoneSignUp from "./components/PhoneSignUp";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { UserAuthContextProvider } from "./context/UserAuthContext";
+import Landing from './components/Landing.js';
+import Header from './components/Header.js';
 
 function App() {
   return (
@@ -23,9 +25,12 @@ function App() {
                   </ProtectedRoute>
                 }
               />
-              <Route path="/" element={<Login />} />
+      
+              <Route path="/landing" elements={{ <Header /> ,<Landing />}} >
               <Route path="/signup" element={<Signup />} />
-              <Route path="/phonesignup" element={<PhoneSignUp />} />
+              <Route path="/Login" element={<Login />} />
+              <Route path="/phonesignup" element ={<PhoneSignUp />} />
+              
             </Routes>
           </UserAuthContextProvider>
         </Col>
