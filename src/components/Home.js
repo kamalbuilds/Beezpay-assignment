@@ -2,7 +2,8 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import { useUserAuth } from "../context/UserAuthContext";
-// import axios from 'axios';
+import axios from 'axios';
+import { useEffect } from "react";
 
 const Home = () => {
   const { logOut, user } = useUserAuth();
@@ -15,11 +16,33 @@ const Home = () => {
       console.log(error.message);
     }
   };
-
+  console.log(user);
+  console.log('kamal');
+  const join={
+    "id": "1",
+    "name": "user_name",
+    "email": "user_email",
+    "number": "user_phone"
+ }
+ 
 //axios post request on successful signup
-  // axios.post{
-
-  // }
+  useEffect(() => {
+    axios.post(`https://us-central1-beezhive-79e2f.cloudfunctions.net/app/api/waitlist`, { join})
+      .then(res => {
+        console.log(res);
+        {if(res.waiting){
+          alert(`You have joined Successfully and your waiting number is ${res.waiting}`);
+        }
+        else if(res.msg==="Error: Email Already registered"){
+          alert("Please try with another email, this already exists");
+        }
+        else if(res.msg==="Error: Phone Number Already registered")
+          alert("phone number already exists,Try to login with another number");
+        }
+      })
+  
+  }, [])
+  
 
 
   return (

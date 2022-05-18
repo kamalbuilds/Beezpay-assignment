@@ -11,11 +11,7 @@ const Login = () => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const { logIn, googleSignIn } = useUserAuth();
   const navigate = useNavigate();
-
-
-
 
 
   return (
@@ -58,7 +54,7 @@ const Login = () => {
         <hr />
 
 
-        <Link to="/phonesignup">
+        <Link to="/phonesignup" name={name} email={email}>
           <div className="d-grid gap-2 mt-3">
             <Button variant="success" type="Submit">
               Sign up with Phone

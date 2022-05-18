@@ -7,7 +7,7 @@ import PhoneInput from "react-phone-number-input";
 import { useUserAuth } from "../context/UserAuthContext";
 import card2 from './images/card2.svg';
 
-const PhoneSignUp = () => {
+const PhoneSignUp = (props) => {
   const [error, setError] = useState("");
   const [number, setNumber] = useState("");
   const [flag, setFlag] = useState(false);
@@ -42,7 +42,8 @@ const PhoneSignUp = () => {
       setError(err.message);
     }
   };
-
+  console.log(props.name);
+  console.log("kamal");
   return (
     <>
       <div className="p-4 box">
