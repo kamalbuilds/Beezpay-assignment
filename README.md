@@ -16,7 +16,11 @@ Steps   performed->
 6> made api post request using axiom.
 
 How to use the site?
+
 1>zoom out as per the requirement for better experience.
+
 2>On landing page click on the Join Now button, which will take you to Signup page.
+
 3> where you can enter details like Name,email,ph no & click on signup button.
+
 4>Verify the otp and proceed , you will be taken to the protected home page where post request is being made and the response is dealt as per the requirement. 
